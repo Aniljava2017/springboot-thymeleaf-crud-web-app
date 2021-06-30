@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Dashboard</title>
+</head>
+<body>
+<!--table strat--->
+  <table align="center" border="1">
+    <h1 align="center">Employee List</h1>
+    <thead>
+    <tr>
+      <th>Employee First Name</th>
+      <th>Employee Last Name</th>
+      <th>Employee Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee: ${listEmployee}">
+      <th th:text="${employee.firstName}"></th>
+      <td th:text="${employee.lastName}"></td>
+      <td th:text="${employee.email}"></td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
